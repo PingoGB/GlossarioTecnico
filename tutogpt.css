@@ -1,0 +1,192 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(61, 61, 61);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    font-weight: 800;
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-decoration: double;
+    background-color: rgb(45, 45, 45);
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.card-tutorial {
+    background-color: rgb(45, 45, 45);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nome-tutorial {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: rgb(60,60,60);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.descricao {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.codigo pre {
+    background: black;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 6px 18px;
+    margin: 10px 0 0 0;
+    box-shadow: 0 2px 8px 0 rgba(44,62,80,0.07);
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box; /* inclui padding e borda na largura total */
+}
+
+.accordion-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: rgb(70,70,70);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.btn{
+   width: 110px;
+   height: fit-content;
+   margin: 0 auto;  /* centraliza horizontalmente */
+   display: block;  /* garante que a margem funcione */
+   
+}
+
+.accordion-btn:hover {
+    background-color: rgb(90,90,90);
+}
+
+.accordion-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(50,50,50);
+    border-radius: 8px;
+}
+
+.exemplo-card{
+    background-color: #3d3d3d;
+    padding: 15px;
+    border-radius: 10px;
+}
+.titulo-card-ex {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.descricao-card-ex {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.exemplo-accordion{
+    background-color: #3d3d3d;
+    padding: 15px;
+    border-radius: 10px;
+}
+.accordion-header{
+cursor: pointer;
+background-color:rgb(42, 42, 42);
+width:fit-content;
+padding: 7px;
+border-radius: 8px;
+}
+.accordion-header:hover{
+    color:coral;
+}
+.exemplo-navbar{
+    background-color: #3d3d3d;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Navbar exemplo funcional */
+.exemplo-navbar .navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.exemplo-navbar .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.exemplo-navbar .dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.exemplo-navbar .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+.exemplo-navbar .navbar a:hover, .exemplo-navbar .dropdown:hover .dropbtn {
+    color: green;
+}
+
+.exemplo-navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.exemplo-navbar .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.exemplo-navbar .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.exemplo-navbar .dropdown:hover .dropdown-content {
+    display: block;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tutogpt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tutoriais</title>
+</head>
+<body>
+    <h1 class="titulo">❓TUTORIAIS</h1>
+    <!-- Tutorial Card: Accordion -->
+    <div class="card-tutorial">
+        <h2 class="nome-tutorial">Como fazer um card?</h2>
+        <p class="descricao">Um card serve para organizar conteúdo visualmente, como título, descrição e imagens.</p>
+        <div class="codigo">
+            <p><strong>HTML:</strong></p>
+            <pre>
+&lt;div class="card"&gt;
+    &lt;h3 class="titulo-card-ex"&gt;Título do Card&lt;/h3&gt;
+    &lt;p class="descricao-card-ex"&gt;Descrição do card.&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+            <p><strong>CSS:</strong></p>
+            <pre>
+.exemplo-card{
+    background-color: #3d3d3d;
+    padding: 15px;
+    border-radius: 10px;
+}
+.titulo-card-ex {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.descricao-card-ex {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+            </pre>
+        </div>
+
+            <div class="btn">
+                <button class="accordion-btn">
+                    <img src="imagem-fechada.png" alt="isaac" id="icone-accordion">
+                </button>
+            </div>
+        <div class="accordion-content">
+            <div class="exemplo-card">
+                <h3 class="titulo-card-ex">Título do Card</h3>
+                <p class="descricao-card-ex">Descrição do card.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tutorial Card: Accordion -->
+    <div class="card-tutorial">
+        <h2 class="nome-tutorial">Como criar um accordion?</h2>
+        <p class="descricao">O accordion serve para esconder ou mostrar conteúdo quando o usuário clica, mantendo a página organizada.</p>
+
+        <div class="codigo">
+            <p><strong>HTML:</strong></p>
+            <pre>
+&lt;div class="accordion-header"&gt;Clique aqui&lt;/div&gt;
+&lt;div class="accordion-content"&gt;Conteúdo escondido&lt;/div&gt;
+            </pre>
+
+            <p><strong>CSS:</strong></p>
+            <pre>
+.accordion-header { cursor: pointer; padding: 10px; background: #2d2d2d; color: white; }
+.accordion-content { display: none; padding: 10px; background: #3d3d3d; }
+            </pre>
+
+            <p><strong>JS:</strong></p>
+            <pre>
+document.querySelectorAll('.accordion-header').forEach(header =&gt; {
+    header.addEventListener('click', () =&gt; {
+        header.nextElementSibling.style.display =
+            header.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+    });
+});
+            </pre>
+        </div>
+
+        <div class="btn">
+                <button class="accordion-btn">
+                    <img src="imagem-fechada.png" alt="isaac" id="icone-accordion">
+                </button>
+            </div>
+            <!-- Accordion funcional -->
+        <div class="accordion-content">
+            <div class="exemplo-accordion">
+                <div class="accordion-header">Clique aqui</div>
+                <div class="accordion-content">Este é o conteúdo do accordion!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tutorial Card: Navbar -->
+    <div class="card-tutorial">
+        <h2 class="nome-tutorial">Como criar uma Navbar?</h2>
+        <p class="descricao">
+            A navbar serve para navegação no site, organizando links principais e menus dropdown para facilitar a interação do usuário.
+        </p>
+
+        <div class="codigo">
+            <p><strong>HTML:</strong></p>
+            <pre>
+&lt;div class="navbar"&gt;
+    &lt;a href="#home"&gt;HTML&lt;/a&gt;
+    &lt;a href="#css"&gt;CSS&lt;/a&gt;
+    &lt;a href="#js"&gt;JS&lt;/a&gt;
+    &lt;div class="dropdown"&gt;
+        &lt;button class="dropbtn"&gt;
+            Tutoriais
+            &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        &lt;div class="dropdown-content"&gt;
+            &lt;a href="#"&gt;Link 1&lt;/a&gt;
+            &lt;a href="#"&gt;Link 2&lt;/a&gt;
+            &lt;a href="#"&gt;Link 3&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+
+            <p><strong>CSS:</strong></p>
+            <pre>
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    color: green;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+            </pre>
+        </div>
+
+        <div class="btn">
+                <button class="accordion-btn">
+                    <img src="imagem-fechada.png" alt="isaac" id="icone-accordion">
+                </button>
+            </div>
+        <div class="accordion-content">
+            <div class="exemplo-navbar">
+                <div class="navbar">
+                    <a href="#home">HTML</a>
+                    <a href="#css">CSS</a>
+                    <a href="#js">JS</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Tutoriais <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tutogpt.js"></script>
+</body>
+</html>
