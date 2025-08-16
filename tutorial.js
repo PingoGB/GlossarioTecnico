@@ -16,6 +16,7 @@ document.querySelectorAll('.exemplo-accordion .accordion-header').forEach(header
 });
 
 
+
 const audioAbrir = new Audio('thumbs_up.mp3');
 const audioFechar = new Audio('thumbs_up.mp3');
 document.querySelectorAll('.accordion-btn').forEach(btn => {

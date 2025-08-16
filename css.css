@@ -1,3 +1,103 @@
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    flex-wrap: wrap;
+    
+}
+.accordion-box {
+    background: black;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 6px 18px;
+    margin: 10px 0 0 0;
+    box-shadow: 0 2px 8px 0 rgba(44,62,80,0.07);
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box; /* inclui padding e borda na largura total */
+}
+.accordion-header {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 17px;
+    outline: none;
+    padding: 0;
+    transition: color 0.2s;
+    width: 100%; 
+    text-align: center;
+    display: block; /* Permite centralizar corretamente */
+    max-height: 105px;
+    overflow-y: auto;    /* Adiciona rolagem vertical */
+    margin-bottom: 5px;
+}
+.accordion-header:hover { /* Efeito de mudar cor quando bota o mouse em cima */
+    color: #004ab9;
+}
+.accordion-header::-webkit-scrollbar { /*Seleciona a barra de rolagem*/
+    width: 8px;              /* largura da barra */
+    background: #222;        /* cor do fundo */
+    border-radius: 8px;
+}
+.accordion-header::-webkit-scrollbar-thumb { /*Seleciona o puxadorzinho da barra de rolagem*/
+    background: #004ab9;     /* cor do "puxador" */
+    border-radius: 8px;
+}
+.accordion-header pre {
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    white-space: pre;
+    text-align: left;
+    background: transparent;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+ .ex-pratico {
+    background-color: rgb(89, 129, 250);
+    font-family: Arial, sans-serif;
+    color: black;
+    border-radius: 5px;
+    width: 430px;
+    box-sizing: border-box;
+    padding: 0px 12px;
+    max-height: 0; /* Começa fechado (altura 0) */
+    overflow: hidden; /* Esconde conteúdo que passa do limite */
+    /* Animação suave da altura e opacidade do accordion */
+    transition-property: max-height, opacity; /*fala que quando "max-height" e "opacity" mudarem de valor terá a animação*/
+    transition-duration: 0.7s, 0.7s;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1), ease; /*usa a animação cubic-bezier para o max height e ease para a opacidade*/
+    font-size: 16px;
+    opacity: 0; /* Começa invisível */
+    
+}
+.ex-pratico.display{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.ex-pratico.display-block{
+    display: block;
+
+}
+.ex-pratico.active {
+    max-height: 500px;
+    opacity: 1;
+}
+.ex-pratico.active.display{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+.ex-pratico.active.display-block{
+    display: block;
+}
 body {
     height: 100%;
     width: 100%;
@@ -5,4 +105,133 @@ body {
     background-color: rgb(61, 61, 61);
     font-family: Arial, sans-serif;
     color: white;
+}
+.card-1{
+    background-color: royalblue;
+    box-sizing: border-box;
+    color: black;
+    flex: 1 1 32%; /* flex-grow: 1 (cresce para ocupar espaço), flex-shrink: 1 (pode diminuir), flex-basis: 32% (base de largura para cada card, cerca de 1/3 do container) */
+    min-width: 280px;
+    max-width: 500px;
+    min-height: 200px;;
+    border-radius: 10px;
+    padding: 5px 15px 10px 15px;
+    box-shadow: 10px 10px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-1:hover{
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-decoration: double;
+    background-color: rgb(45, 45, 45);
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    
+}
+.cardzito-1{
+    background-color: rgb(250, 107, 91);
+    width: fit-content;
+    padding: 0px 5px 0px 5px;
+    border-radius: 10px;
+}
+.cardzito-texto{
+    font-size: 20px;
+    font-weight: bold;
+}
+.cardzito-2{
+    background-color: rgb(250, 107, 91);
+    width: fit-content;
+    padding: 0px 5px 0px 5px;
+    border-radius: 10px;
+}
+.cardzito-texto-2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: black;
+    color: aliceblue;
+    width: fit-content;
+    padding: 0px 5px 0px 5px;
+    border-radius: 8px;
+}
+.caixa-animada {
+    width: 80px;
+    height: 100px;
+    background-color: black;
+    transition: background-color 0.5s, transform 0.3s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.caixa-animada:hover {
+    background-color: white;
+    transform: rotate(15deg) scale(1.1);
+}
+.ex-pratico.transition{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+.ex-flex-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.item {
+    background: #5a9;
+    color: white;
+    padding: 10px;
+}
+.ex-pratico.active.overflow {
+    max-height: 50px;
+    opacity: 1;
+}
+.texto-bem-grandao{
+    overflow: hidden;
+}
+.palavra-bem-grandona{
+    word-break: break-all;
+}
+.btn-voltar {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.1);
+    padding: 10px 22px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    transition: transform 0.3s, background-color 0.2s, box-shadow 0.3s;
+    position: absolute;
+    left: 0px;
+}
+.btn-voltar:hover {
+    background-color: #111;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px rgba(38, 49, 255, 0.1);
+}
+.botao-do-lado-do-titulo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin:20px;
 }

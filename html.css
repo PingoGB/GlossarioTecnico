@@ -37,7 +37,7 @@
     height: 38px;
 }
 .accordion-header:hover { /* Efeito de mudar cor quando bota o mouse em cima */
-    color: #b95c00;
+    color: #b91600;
 }
  .ex-pratico {
     background-color: salmon;
@@ -72,7 +72,7 @@ body {
     color: white;
 }
 .card-1{
-    background-color: burlywood;
+    background-color: tomato;
     box-sizing: border-box;
     color: black;
     flex: 1 1 32%; /* flex-grow: 1 (cresce para ocupar espaço), flex-shrink: 1 (pode diminuir), flex-basis: 32% (base de largura para cada card, cerca de 1/3 do container) */
@@ -135,4 +135,33 @@ iframe{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.btn-voltar {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.1);
+    padding: 10px 22px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    transition: transform 0.3s, background-color 0.2s, box-shadow 0.3s;
+    position: absolute;
+    left: 0px;
+}
+.btn-voltar:hover {
+    background-color: #111;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px rgba(245, 61, 61, 0.1);
+}
+.botao-do-lado-do-titulo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin:20px;
 }

@@ -7,6 +7,77 @@
     <title>JavaScript</title>
 </head>
 <body>
-    
+    <div class="botao-do-lado-do-titulo">
+        <button class="btn-voltar" onclick="window.history.back()">
+    &#8592; Voltar
+        </button>
+        <h1 class ="titulo">⚙️CÓDIGOS JAVASCRIPT</h1>
+    </div>
+    <div class ="cards">
+        <div class ="card-1">
+            <h2 class="nome-tag">If-else --&gt; <button class="botao-ex"><a href="ifelse-exemplo.html"target="blank">Ver exemplo funcional</a></button></h2>
+            <p class="descricao-tag">Usado para executar diferentes blocos de código dependendo de uma condição.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+let idade = prompt("Digite sua idade:");
+
+if(idade > 17){
+    alert("Você é maior de idade");
+}else{
+    alert("Você é menor de idade");
+}
+
+// Fecha a aba/janela quando terminar
+window.close();
+                    </pre>
+                </button>
+            </div>
+        </div>
+        <div class ="card-1">
+            <h2 class="nome-tag">Switch-case --&gt; <button class="botao-ex"><a href="switchcase-exemplo.html"target="blank">Ver exemplo funcional</a></button></h2>
+            <p class="descricao-tag">Usado para executar diferentes blocos de código com base no valor de uma variável./p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+let dia = 3;
+let diaNome;
+
+switch(dia){
+    case 1:
+        diaNome = "Domingo";
+        break;
+    case 2:
+        diaNome = "Segunda";
+        break;
+    case 3:
+        diaNome = "Terça";
+        break;
+    case 4:
+        diaNome = "Quarta";
+        break;
+    case 5:
+        diaNome = "Quinta";
+        break;
+    case 6:
+        diaNome = "Sexta";
+        break;
+    case 7:
+        diaNome = "Sábado";
+        break;
+    default:
+        diaNome = "Dia inválido";
+}
+
+alert("Hoje é " + diaNome);
+
+// Fecha a aba/janela quando terminar
+window.close();
+                    </pre>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

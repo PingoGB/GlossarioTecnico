@@ -3,10 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="css.css">
+    <link rel="stylesheet" href="css.css">
     <title>CSS</title>
 </head>
 <body>
-    
+    <div class="botao-do-lado-do-titulo">
+        <button class="btn-voltar" onclick="window.history.back()">
+    &#8592; Voltar
+        </button>
+        <h1 class ="titulo">🎨PROPRIEDADES CSS</h1>
+    </div>
+<div class ="cards">
+        <div class ="card-1">
+            <h2 class="nome-tag">Display:flex</h2>
+            <p class="descricao-tag">Organiza os conteúdos em linha, permitindo melhor gerenciamento de organização de espaço.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+.container {
+    display: flex;
+    justify-content: center;
+}
+                    </pre>
+                </button>
+                <div class="ex-pratico display">
+                    <div class="cardzito-1">
+                        <p class="cardzito-texto">1</p>
+                    </div>
+                    <div class="cardzito-1">
+                        <p class="cardzito-texto">2</p>
+                    </div>
+                    <div class="cardzito-1">
+                        <p class="cardzito-texto">3</p>
+                    </div>
+                    
+            </div>
+        </div>  
+    </div>
+    <div class ="card-1">
+            <h2 class="nome-tag">Display:block</h2>
+            <p class="descricao-tag">Faz com que o conteúdo ocupe toda a largura da tela. Assim quebrando uma linha.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+.container {
+    display: block;
+}
+                    </pre>
+                </button>
+                <div class="ex-pratico display-block">
+                    <div class="cardzito-2">
+                        <p class="cardzito-texto-2">1</p>
+                    </div>
+                    <div class="cardzito-2">
+                        <p class="cardzito-texto-2">2</p>
+                    </div>  
+            </div>
+        </div>  
+    </div>
+    <div class ="card-1">
+            <h2 class="nome-tag">:hover</h2>
+            <p class="descricao-tag">Aplica algum efeito no elemento quando o mouse estiver em cima do mesmo.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+.btn:hover{
+    background-color: black;
+    color: aliceblue;
+    width: fit-content;
+    padding: 0px 5px 0px 5px;
+    border-radius: 8px;
+}
+                    </pre>
+                </button>
+                <div class="ex-pratico">
+                    <p class="btn">Efeito hover</p>  
+                </div>
+        </div>  
+    </div>
+     <div class ="card-1">
+            <h2 class="nome-tag">transition</h2>
+            <p class="descricao-tag">Cria animações suaves quando uma propriedade do elemento muda, como cor, tamanho ou posição.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+.caixa-animada {
+    background-color: black;
+    transition: background-color 0.5s, transform 0.3s;
+}
+
+.caixa-animada:hover {
+    background-color: white;
+    transform: rotate(15deg) scale(1.1);
+}
+                    </pre>
+                </button>
+                <div class="ex-pratico transition">
+                      <div class="caixa-animada"></div>
+                </div>
+        </div>  
+    </div>
+    <div class ="card-1">
+            <h2 class="nome-tag">transform</h2>
+            <p class="descricao-tag">Aplica transformações em um elemento.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+.caixa-animada {
+    background-color: black;
+    transition: background-color 0.5s, transform 0.3s;
+}
+
+.caixa-animada:hover {
+    background-color: white;
+    transform: rotate(15deg) scale(1.1);
+}
+                    </pre>
+                </button>
+                <div class="ex-pratico transition">
+                      <div class="caixa-animada"></div>
+                </div>
+        </div>  
+    </div>
+    <div class ="card-1">
+            <h2 class="nome-tag">flex-wrap</h2>
+            <p class="descricao-tag">Em um elemento flex, ele dita como vai funcionar a sua organização/quebra de linha.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+.ex-flex-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.item {
+    background: #5a9;
+    color: white;
+    padding: 10px;
+}
+                    </pre>
+                </button>
+                <div class="ex-pratico">
+                    <div class="ex-flex-wrap">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                    </div>
+                </div>
+        </div>  
+    </div>
+    <div class ="card-1">
+            <h2 class="nome-tag">overflow</h2>
+            <p class="descricao-tag">Dita o que acontece com um elemento quando ele ultrapassa o tamanho do seu elemento pai.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+.texto-bem-grandao{
+    overflow: hidden;
+}
+                    </pre>
+                </button>
+                <div class="ex-pratico overflow">
+                    <p class="texto-bem-grandao">
+                        Estou escrevendo um texto muito longo que vai ultrapassar o tamanho do meu elemento pai. Mas quando eu quero dizer longo, é tipo, não longo de verdade, mas só longo o suficiente pra que o tamanho da caixa definido por mim seja menor do que esse texto totalmente legal e longo.
+                    </p>
+                </div>
+        </div>  
+    </div>
+     <div class ="card-1">
+            <h2 class="nome-tag">word-break</h2>
+            <p class="descricao-tag">Define como as palavras devem ser quebradas quando não couberem na largura do container.</p>
+            <div class="accordion-box">
+                <button class="accordion-header">
+                    <pre>
+.palavra-bem-grandona{
+    word-break: break-all;
+}
+                    </pre>
+                </button>
+                <div class="ex-pratico">
+                    <p class="palavra-bem-grandona">
+                        EssaPalavraÉTãoGrandeQueNãoCabeNoContainerEPrecisaSerQuebradaParaContinuarAExibiçãoDoTextoDeFormaCorreta.
+                    </p>
+                </div>
+        </div>  
+    </div>
+</div>
+    <script src ="accordion.js"></script>
 </body>
 </html>
